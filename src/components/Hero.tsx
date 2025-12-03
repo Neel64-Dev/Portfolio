@@ -2,10 +2,19 @@ import { motion } from 'framer-motion';
 import { Scene3D } from './Scene3D';
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useTypingEffect } from '@/hooks/useTypingEffect';
 
 export const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Typing effect for the subtitle
+  const typedText = useTypingEffect({
+    texts: ["I'm Neel", "a Full Stack Web Developer", "a Designer"],
+    typingSpeed: 100,
+    deletingSpeed: 50,
+    pauseDuration: 2000,
+  });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -56,7 +65,10 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Full Stack Developer & Creative Coder
+            <span className="inline-flex items-center">
+              {typedText}
+              <span className="inline-block w-0.5 h-6 md:h-8 bg-primary ml-1 animate-blink"></span>
+            </span>
           </motion.p>
 
           <motion.div

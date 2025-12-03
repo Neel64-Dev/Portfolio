@@ -8,34 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark theme - Default */
-    --background: 222 47% 11%;
-    --foreground: 45 35% 92%;
+    /* Light Yellow theme - Default */
+    --background: 50 80% 92%;
+    --foreground: 30 15% 25%;
 
-    --card: 222 47% 15%;
-    --card-foreground: 45 35% 92%;
+    --card: 50 70% 96%;
+    --card-foreground: 30 15% 25%;
 
-    --popover: 222 47% 15%;
-    --popover-foreground: 45 35% 92%;
+    --popover: 50 70% 96%;
+    --popover-foreground: 30 15% 25%;
 
     /* Warm orange primary */
     --primary: 35 70% 55%;
-    --primary-foreground: 222 47% 11%;
+    --primary-foreground: 50 80% 98%;
 
-    --secondary: 222 47% 20%;
-    --secondary-foreground: 45 35% 92%;
+    --secondary: 50 60% 88%;
+    --secondary-foreground: 30 15% 25%;
 
-    --muted: 222 47% 20%;
-    --muted-foreground: 45 20% 70%;
+    --muted: 50 60% 88%;
+    --muted-foreground: 30 10% 50%;
 
     --accent: 40 65% 60%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 50 80% 98%;
 
     --destructive: 0 60% 55%;
-    --destructive-foreground: 45 35% 98%;
+    --destructive-foreground: 50 80% 98%;
 
-    --border: 222 47% 25%;
-    --input: 222 47% 25%;
+    --border: 45 40% 80%;
+    --input: 45 40% 80%;
     --ring: 35 70% 55%;
 
     --radius: 0.5rem;
@@ -46,41 +46,41 @@ All colors MUST be HSL.
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(35, 70%, 55%) 0%, hsl(45, 70%, 60%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(222, 47%, 11%) 0%, hsl(222, 47%, 15%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(50, 80%, 92%) 0%, hsl(50, 70%, 96%) 100%);
 
     /* Shadows */
     --shadow-glow: 0 0 30px hsl(35 70% 55% / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 32px hsl(30 15% 25% / 0.08);
   }
 
   .light {
     /* Light soft theme */
-    --background: 45 35% 92%;
+    --background: 50 80% 92%;
     --foreground: 30 15% 25%;
 
-    --card: 45 25% 96%;
+    --card: 50 70% 96%;
     --card-foreground: 30 15% 25%;
 
-    --popover: 45 25% 96%;
+    --popover: 50 70% 96%;
     --popover-foreground: 30 15% 25%;
 
     --primary: 35 70% 55%;
-    --primary-foreground: 45 35% 98%;
+    --primary-foreground: 50 80% 98%;
 
-    --secondary: 45 20% 88%;
+    --secondary: 50 60% 88%;
     --secondary-foreground: 30 15% 25%;
 
-    --muted: 45 20% 88%;
+    --muted: 50 60% 88%;
     --muted-foreground: 30 10% 50%;
 
     --accent: 40 65% 60%;
-    --accent-foreground: 45 35% 98%;
+    --accent-foreground: 50 80% 98%;
 
     --destructive: 0 60% 55%;
-    --destructive-foreground: 45 35% 98%;
+    --destructive-foreground: 50 80% 98%;
 
-    --border: 35 15% 80%;
-    --input: 35 15% 80%;
+    --border: 45 40% 80%;
+    --input: 45 40% 80%;
     --ring: 35 70% 55%;
 
     /* Custom portfolio colors for light */
@@ -155,5 +155,23 @@ All colors MUST be HSL.
 
   .skill-icon-3d:hover {
     box-shadow: 0 10px 30px hsl(var(--primary) / 0.3);
+  }
+
+  /* Blinking cursor animation for typing effect */
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+
+    0%,
+    50% {
+      opacity: 1;
+    }
+
+    51%,
+    100% {
+      opacity: 0;
+    }
   }
 }
