@@ -221,7 +221,7 @@ export const TerminalAdvanced = () => {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd8f08d79-6677-4af4-be0d-1de21d0716aa', // Replace with your key from web3forms.com
+          access_key: 'fa30c4f1-da4d-4c1b-9e1d-16ec81de2e37', // Replace with your key from web3forms.com
           name: data.name,
           email: data.email,
           subject: data.subject,
