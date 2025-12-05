@@ -49,14 +49,14 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-glow"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-glow tracking-tight"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-primary font-mono">{"<"}</span>
+            <span className="text-primary font-mono mr-2">{"<"}</span>
             Hello World
-            <span className="text-primary font-mono">{" />"}</span>
+            <span className="text-primary font-mono ml-2">{" />"}</span>
           </motion.h1>
 
           <motion.p
@@ -78,13 +78,15 @@ export const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <a
-              href="experience"
+              href="https://drive.google.com/file/d/1WwoQmj4QDTsDMbwcIudiDJGrAcBXgTpR/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-primary text-primary-foreground font-mono rounded hover-glow transition-all"
             >
-              View Work
+              Download CV
             </a>
             <a
-              href="contact"
+              href="#contact"
               className="px-8 py-3 bg-secondary text-secondary-foreground font-mono rounded hover:bg-secondary/80 transition-all"
             >
               Get in Touch

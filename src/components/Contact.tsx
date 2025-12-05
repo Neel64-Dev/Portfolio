@@ -25,9 +25,9 @@ export const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-mono">
             <span className="text-primary">{'// '}</span>Get In Touch
           </h2>
-          
+
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            I'm always open to new opportunities and collaborations. 
+            I'm always open to new opportunities and collaborations.
             Whether you have a project in mind or just want to chat, feel free to reach out!
           </p>
 
@@ -56,7 +56,7 @@ export const Contact = () => {
           </motion.div>
 
           <motion.a
-            href="mailto:hello@example.com"
+            href="mailto:prajapatineel122002@gmail.com"
             className="inline-block px-10 py-4 bg-primary text-primary-foreground font-mono rounded-lg hover-glow text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -64,7 +64,7 @@ export const Contact = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Send Message
+            Say 'Hello' 👋
           </motion.a>
         </motion.div>
       </div>
