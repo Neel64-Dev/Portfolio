@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light Yellow theme - Default */
+    /* Light Theme */
     --background: 50 80% 92%;
     --foreground: 30 15% 25%;
 
@@ -18,7 +18,6 @@ All colors MUST be HSL.
     --popover: 50 70% 96%;
     --popover-foreground: 30 15% 25%;
 
-    /* Warm orange primary */
     --primary: 35 70% 55%;
     --primary-foreground: 50 80% 98%;
 
@@ -40,55 +39,60 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Custom portfolio colors */
+    /* Custom portfolio colors - Light */
     --glow: 35 70% 55%;
     --glow-subtle: 35 45% 50%;
 
-    /* Gradients */
+    /* Gradients - Light */
     --gradient-primary: linear-gradient(135deg, hsl(35, 70%, 55%) 0%, hsl(45, 70%, 60%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(50, 80%, 92%) 0%, hsl(50, 70%, 96%) 100%);
 
-    /* Shadows */
+    /* Shadows - Light */
     --shadow-glow: 0 0 30px hsl(35 70% 55% / 0.3);
     --shadow-card: 0 8px 32px hsl(30 15% 25% / 0.08);
   }
 
-  .light {
-    /* Light soft theme */
-    --background: 50 80% 92%;
-    --foreground: 30 15% 25%;
+  .dark {
+    /* Dark Theme */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 50 70% 96%;
-    --card-foreground: 30 15% 25%;
+    --card: 240 10% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 50 70% 96%;
-    --popover-foreground: 30 15% 25%;
+    --popover: 240 10% 7%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 35 70% 55%;
-    --primary-foreground: 50 80% 98%;
+    --primary: 35 90% 60%;
+    --primary-foreground: 240 10% 4%;
 
-    --secondary: 50 60% 88%;
-    --secondary-foreground: 30 15% 25%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 50 60% 88%;
-    --muted-foreground: 30 10% 50%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 40 65% 60%;
-    --accent-foreground: 50 80% 98%;
+    --accent: 35 90% 60%;
+    --accent-foreground: 240 10% 4%;
 
-    --destructive: 0 60% 55%;
-    --destructive-foreground: 50 80% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 45 40% 80%;
-    --input: 45 40% 80%;
-    --ring: 35 70% 55%;
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 35 90% 60%;
 
-    /* Custom portfolio colors for light */
-    --glow: 35 70% 55%;
-    --glow-subtle: 35 45% 50%;
+    /* Custom portfolio colors - Dark */
+    --glow: 35 90% 60%;
+    --glow-subtle: 35 50% 30%;
 
-    --shadow-glow: 0 0 25px hsl(35 70% 55% / 0.2);
-    --shadow-card: 0 8px 32px hsl(30 15% 25% / 0.08);
+    /* Gradients - Dark */
+    --gradient-primary: linear-gradient(135deg, hsl(35, 90%, 60%) 0%, hsl(45, 90%, 65%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(240, 10%, 4%) 0%, hsl(240, 10%, 6%) 100%);
+
+    /* Shadows - Dark */
+    --shadow-glow: 0 0 30px hsl(35 90% 60% / 0.15);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
   }
 }
 
