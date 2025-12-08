@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         mono: ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace'],
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        macklin: ['Macklin Slab ExtraBold', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
