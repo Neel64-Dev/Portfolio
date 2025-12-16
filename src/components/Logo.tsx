@@ -34,7 +34,7 @@ export const Logo = () => {
             whileHover={{ scale: 1.05 }}
         >
             <motion.span variants={item}>N</motion.span>
-            <motion.span variants={item} className="tracking-tighter">.</motion.span>
+            {/* <motion.span variants={item} className="tracking-tighter">.</motion.span> */}
             <motion.span variants={item} className="tracking-tighter">,</motion.span>
         </motion.div>
     );
