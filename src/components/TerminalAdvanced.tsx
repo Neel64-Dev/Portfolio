@@ -211,6 +211,19 @@ export const TerminalAdvanced = () => {
   };
 
   const sendEmail = async (data: { name: string; email: string; subject: string; message: string }) => {
+    const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+
+    if (!web3formsKey) {
+      setLines(prev => [...prev, {
+        type: 'error',
+        text: '✗ Web3Forms access key is not configured. Set VITE_WEB3FORMS_KEY in your environment and rebuild the app.'
+      }]);
+
+      setContactStep('none');
+      setContactData({ name: '', email: '', subject: '', message: '' });
+      return;
+    }
+
     try {
       // Using Web3Forms - Free email service, no signup required
       // Get your access key from: https://web3forms.com/
@@ -221,7 +234,7 @@ export const TerminalAdvanced = () => {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd8f08d79-6677-4af4-be0d-1de21d0716aa', // Replace with your key from web3forms.com
+          access_key: web3formsKey,
           name: data.name,
           email: data.email,
           subject: data.subject,
