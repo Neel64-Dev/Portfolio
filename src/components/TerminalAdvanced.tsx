@@ -69,7 +69,7 @@ export const TerminalAdvanced = () => {
   const [lines, setLines] = useState<TerminalLine[]>([]);
   const [input, setInput] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(true);
   const [contactStep, setContactStep] = useState<'none' | 'name' | 'email' | 'subject' | 'message'>('none');
   const [contactData, setContactData] = useState({ name: '', email: '', subject: '', message: '' });
 
