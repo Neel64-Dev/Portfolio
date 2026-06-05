@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: personal-portfolio-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped
