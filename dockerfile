@@ -13,6 +13,10 @@ RUN npm ci --prefer-offline --no-audit
 # Copy the rest of the application source code
 COPY . .
 
+# Web3Forms key is baked in at build time (Vite requirement)
+ARG VITE_WEB3FORMS_KEY
+ENV VITE_WEB3FORMS_KEY=$VITE_WEB3FORMS_KEY
+
 # Build the application for production
 RUN npm run build
 
