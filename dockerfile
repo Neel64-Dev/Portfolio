@@ -23,8 +23,11 @@ RUN npm run build
 # Stage 2: Serve the built app using Nginx
 FROM nginx:alpine
 
-# Copy the custom Nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Railway injects PORT at runtime; default 80 for local Docker runs
+ENV PORT=80
+
+# Template is processed at startup so nginx listens on $PORT (required by Railway)
+COPY nginx.conf /etc/nginx/templates/default.conf.template
 
 # Install curl for container health checks
 RUN apk add --no-cache curl
@@ -32,12 +35,11 @@ RUN apk add --no-cache curl
 # Copy the build output from the builder stage to Nginx's default public directory
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose port 80 to the outside world
 EXPOSE 80
 
-# Health check for Docker container
+# Health check uses the same port nginx binds to
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD curl -f http://localhost/ || exit 1
+  CMD sh -c 'curl -f "http://127.0.0.1:${PORT}/" || exit 1'
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
