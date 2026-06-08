@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     period: 'April 2025 - Present',
     location: 'On-site',
     description: 'Working as a Junior Software Engineer, developing and maintaining full-stack web applications using modern technologies and frameworks.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'PostgreSQL', 'Express', 'Firebase'],
+    technologies: ['React', 'Node.js', 'MongoDB', 'PostgreSQL', 'Express', 'Firebase', 'Redis', 'Github Actions(CD)'],
   },
   {
     role: 'Junior Software Engineer',

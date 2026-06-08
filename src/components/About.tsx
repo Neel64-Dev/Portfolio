@@ -33,7 +33,7 @@ export const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center font-mono">
+          {/* <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center font-mono">
             <span className="text-primary">{'// '}</span>About Me
           </h2>
 
@@ -67,7 +67,7 @@ export const About = () => {
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
               />
             </motion.div>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (

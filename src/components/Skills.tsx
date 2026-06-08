@@ -27,12 +27,12 @@ export const skillCategories = [
   {
     category: 'Tools & Others',
     // skills: ['Git', 'Docker', 'AWS', 'Figma', 'VS Code'],
-    skills: ['Git', 'GitLab', 'VS Code'],
+    skills: ['Git', 'GitLab', 'Docker'],
   },
   {
     category: 'Deployments',
     // skills: ['Git', 'Docker', 'AWS', 'Figma', 'VS Code'],
-    skills: ['Render', 'Netlify'],
+    skills: ['Railway', 'GitHub Actions', 'Render', 'Netlify'],
   },
 ];
 

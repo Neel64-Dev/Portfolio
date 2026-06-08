@@ -12,7 +12,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 const Index = () => {
   return (
     <main className="relative">
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <Hero />
       <About />
       <Skills />
