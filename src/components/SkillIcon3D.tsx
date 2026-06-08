@@ -6,7 +6,7 @@ import {
   SiThreedotjs, SiBlender,
   SiGit, SiDocker, SiAmazon, SiFigma,
   SiJavascript, SiBootstrap, SiGitlab, SiNetlify, SiRender,
-  SiGreensock, SiRedux, SiReactrouter
+  SiGreensock, SiRedux, SiReactrouter, SiRailway, SiGithubactions,
 } from 'react-icons/si';
 import { Code2, Sparkles, Package, Database } from 'lucide-react';
 
@@ -36,6 +36,8 @@ const iconMap: Record<string, any> = {
   'GitLab': SiGitlab,
   'Netlify': SiNetlify,
   'Render': SiRender,
+  'Railway': SiRailway,
+  'GitHub Actions': SiGithubactions,
   'Redux Toolkit': SiRedux,
   'React Router DOM': SiReactrouter,
   'TanStack': Database,

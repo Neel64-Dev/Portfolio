@@ -194,16 +194,51 @@ All colors MUST be HSL.
     font-family: 'Patrick Hand', cursive;
     font-weight: 700;
     font-size: clamp(3.5rem, 8vw, 6.5rem);
-    line-height: 1.05;
+    line-height: 1.02;
     letter-spacing: 0.01em;
     color: hsl(var(--foreground));
+    text-wrap: balance;
   }
 
-  .hero-subtitle {
-    font-size: clamp(0.875rem, 1.25vw, 1.0625rem);
-    line-height: 1.72;
-    letter-spacing: -0.01em;
-    max-width: 26rem;
+  .hero-headline-name {
+    display: inline-block;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--primary)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    max-width: 34rem;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-intro {
+      padding-left: 1.25rem;
+      border-left: 3px solid hsl(var(--primary) / 0.4);
+    }
+  }
+
+  .hero-subtitle-lead {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.55;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: hsl(var(--foreground) / 0.92);
+    text-wrap: pretty;
+  }
+
+  .hero-subtitle-emphasis {
+    font-style: normal;
+    font-weight: 600;
+    color: hsl(var(--primary));
   }
 
   .hero-subtitle-typed {
@@ -212,6 +247,10 @@ All colors MUST be HSL.
 
   .hero-subtitle-body {
     @apply font-sans font-normal text-muted-foreground;
+    font-size: clamp(0.9375rem, 1.35vw, 1.0625rem);
+    line-height: 1.75;
+    letter-spacing: -0.008em;
+    text-wrap: pretty;
   }
 
   .hero-subtitle-body strong {
@@ -291,6 +330,11 @@ All colors MUST be HSL.
       0 0 0 4px hsl(var(--ring));
   }
 
+  .hero-cta-group {
+    margin-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
   .hero-cta-group .btn-primary,
   .hero-cta-group .btn-secondary {
     min-height: 44px;
@@ -310,9 +354,9 @@ All colors MUST be HSL.
     align-items: flex-end;
     justify-content: center;
     width: 100%;
-    min-height: clamp(360px, 52vh, 620px);
+    min-height: clamp(280px, 42vh, 520px);
     padding: 2rem 0.5rem 0;
-    animation: hero-float 5s ease-in-out infinite alternate;
+    margin-bottom: 0;
   }
 
   .hero-profile-float {
@@ -322,15 +366,16 @@ All colors MUST be HSL.
     align-items: flex-end;
     justify-content: center;
     width: 100%;
+    line-height: 0;
   }
 
   @keyframes hero-float {
     0% {
-      transform: translateY(0);
+      transform: scale(1);
     }
 
     100% {
-      transform: translateY(-14px);
+      transform: scale(1.012);
     }
   }
 
@@ -385,8 +430,10 @@ All colors MUST be HSL.
     object-fit: contain;
     object-position: bottom center;
     display: block;
+    vertical-align: bottom;
     background: transparent;
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: hero-float 5s ease-in-out infinite alternate;
   }
 
   .hero-profile-image:hover {
@@ -415,7 +462,7 @@ All colors MUST be HSL.
     }
 
     .hero-profile-float {
-      align-items: center;
+      align-items: flex-end;
     }
 
     .hero-doodle-sketchpad {
@@ -455,8 +502,9 @@ All colors MUST be HSL.
       font-size: clamp(3rem, 10vw, 4.5rem);
     }
 
-    .hero-subtitle {
+    .hero-intro {
       max-width: 100%;
+      gap: 1rem;
     }
   }
 
@@ -547,6 +595,7 @@ All colors MUST be HSL.
 
   .hero-trust-ticker {
     width: 100%;
+    margin-top: 0;
   }
 
   .hero-ticker-outer {
@@ -564,6 +613,11 @@ All colors MUST be HSL.
     align-items: center;
     width: max-content;
     animation: hero-ticker-scroll 28s linear infinite;
+  }
+
+  .hero-ticker-track-scroll-driven {
+    animation: none;
+    will-change: transform;
   }
 
   .hero-ticker-track:hover {
@@ -638,7 +692,7 @@ All colors MUST be HSL.
       animation: none;
     }
 
-    .hero-profile-showcase {
+    .hero-profile-image {
       animation: none;
     }
 
